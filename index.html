@@ -1,505 +1,629 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ACE Auto Electrician - Home Page</title>
+    <meta name="description"
+        content="Established in 1986 ACE Auto Electrician has grown into one of Victoria’s largest auto electrician repairers.">
+
     <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js"></script>
+
+    <!-- icon -->
+    <link rel="icon" type="image/png" sizes="46x46" href="./images/favicon.ico" >
+
+
 </head>
+
 <body>
-
     <!-- ============================================ -->
-<!--                 Navigation                   -->
-<!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
 
-<header id="cs-navigation">
-    <div class="cs-container">
-        <!--Nav Logo-->
-        <a href="" class="cs-logo" aria-label="back to home">
-            <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Flogo-black.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
-        </a>
-        <!--Navigation List-->
-        <nav class="cs-nav" role="navigation">
-            <!--Mobile Nav Toggle-->
-            <button class="cs-toggle" aria-label="mobile menu toggle">
-                <div class="cs-box" aria-hidden="true">
-                    <span class="cs-line cs-line1" aria-hidden="true"></span>
-                    <span class="cs-line cs-line2" aria-hidden="true"></span>
-                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!--Nav Logo-->
+            <a href="" class="cs-logo" aria-label="back to home">
+                <img src="./images/logo-nav.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <!--Navigation List-->
+            <nav class="cs-nav" role="navigation">
+                <!--Mobile Nav Toggle-->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link cs-active">
+                                Home
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link">
+                                About
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link">
+                                Services
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link">
+                                Get Quotes
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link">
+                                Blogs
+                            </a>
+                        </li>
+
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link">
+                                FAQ
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </button>
-            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-            <div class="cs-ul-wrapper">
-                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link cs-active">
-                            Home
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            About
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            Services
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            About Us
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            FAQ
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <a href="" class="cs-button-solid cs-nav-button">Contact Us</a>
-        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
-        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            </nav>
+            <a href="" class="cs-button-solid cs-nav-button">Make Booking</a>
+            <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+            <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
             <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
             <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
         </button> -->
-    </div>
-</header>
-                                
-                      
-    
-  <!-- ============================================ -->
-<!--                    Hero                      -->
-<!-- ============================================ -->
-
-<section id="hero-1618">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">
-                
-                We Come To You – 7 Days a Week               
-            </span>
-            <h1 class="cs-title"> AUTO ELECTRICIAN MELBOURNE</h1>
-            <a href="" class="cs-button-solid">Request Appointment</a>
         </div>
-        
-    </div>
+    </header>
 
-    <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
-    <picture class="cs-background">
-        <source media="(max-width: 600px)"  src="./images/background1.jpg">
-        <source media="(min-width: 601px)" src="./images/background1.jpg">
-        <img decoding="async" src="./images/background4.jpg" alt="meeting" width="2250" height="1500" aria-hidden="true">
-    </picture>
-</section>
-       
-<!-- ============================================ -->
-<!--                   Why Us                 -->
-<!-- ============================================ -->
-<section id="services-1188">
-    <div class="cs-container">
-        <div class="cs-content">
 
-            <h2 class="cs-title">Why choose us</h2>
-            <!-- <p class="cs-text">
+
+    <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
+
+    <section id="hero-1618">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">
+
+                    We Come To You – 7 Days a Week
+                </span>
+                <h1 class="cs-title"> ACE AUTO <br>ELECTRICIAN </h1>
+                <a href="" class="cs-button-solid"> Make Booking </a>
+            </div>
+
+        </div>
+
+        <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" src="./images/repair1.jpg" alt="Header/Hero image of engine">
+            <source media="(min-width: 601px)" src="./images/repair1.jpg" alt="Header/Hero image of engine">
+            <img decoding="async" src="./images/repair1.jpg" alt="Header/Hero image of engine" width="2250"
+                height="1500" aria-hidden="true">
+        </picture>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!--                   Why Us                 -->
+    <!-- ============================================ -->
+    <section id="services-1188">
+        <div class="cs-container">
+            <div class="cs-content">
+
+                <h2 class="cs-title">Why choose us</h2>
+                <!-- <p class="cs-text">
                 Facilisis condimentum viverra scelerisque ac morbi sit sed. Turpis sagittis in blandit eleifend tortor ullamcorper eu placerat. Et orci felis volutpat, etiam vitae egestas volutpat pulvinar.
             </p> -->
-        </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/check-circle.svg" alt="icon" width="48" height="48">
-                <h3 class="cs-h3">100% Success Rate</h3>
-                <p class="cs-item-text">
-                    We provide some of the finest quality, most responsive and reliable, and cost effective services and solutions.
-                </p>
-            </li>
-            <li class="cs-item">
-                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/speedometer.svg" alt="icon" width="48" height="48">
-                <h3 class="cs-h3">Expert Legal Services</h3>
-                <p class="cs-item-text">
-                    We provide some of the finest quality, most responsive and reliable, and cost effective services and solutions.
-                </p>
-            </li>
-            <li class="cs-item">
-                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Like.svg" alt="icon" width="48" height="48">
-                <h3 class="cs-h3">Highly Recommend</h3>
-                <p class="cs-item-text">
-                    We provide some of the finest quality, most responsive and reliable, and cost effective services and solutions.
-                </p>
-            </li>
-        </ul>
-    </div>
-</section>
-                                
-<!-- ============================================ -->
-<!--                  About Us                 -->
-<!-- ============================================ -->
-
-<section id="why-choose-37">
-    <div class="cs-container">
-        <!-- Right Image -->
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/lightbulb-m.jpg">
-            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/lightbulb.jpg">
-            <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/lightbulb.jpg" alt="lightbulbs on a wire" width="858" height="781">
-        </picture>
-        <div class="cs-content">
-            <span class="cs-topper">About Us</span>
-            <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            <p class="cs-text">
-                Facilisis condimentum viverra scelerisque ac morbi sit sed. Turpis sagittis in blandit eleifend tortor ullamcorper eu placerat. Et orci felis volutpat, etiam vitae egestas volutpat pulvinar. 
-            </p>
-            <ul class="cs-ul">
-                <li class="cs-li">
-                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/yellow-check.svg" alt="checkmark" width="27" height="27">
-                    Clean Work
-                </li>
-                <li class="cs-li">
-                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/yellow-check.svg" alt="checkmark" width="27" height="27">
-                    Attention To Detail
-                </li>
-                <li class="cs-li">
-                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/yellow-check.svg" alt="checkmark" width="27" height="27">
-                    Punctual
-                </li>
-                <li class="cs-li">
-                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/yellow-check.svg" alt="checkmark" width="27" height="27">
-                    Quality Guaranteed
-                </li>
-            </ul>
-            <a href="" class="cs-button-solid">Request A Quote Today</a>
-        </div>
-    </div>
-</section>
-                                
-      <!-- ============================================ -->
-<!--                  Services offered                   -->
-<!-- ============================================ -->
-
-<section id="services-1628">
-    <div class="cs-container">
-        <div class="cs-content">
-            <div class="cs-flex">
-                <span class="cs-topper">Our Services</span>
-                <h2 class="cs-title">Grow Your Business with Our New Bold Agency</h2>
             </div>
-            <p class="cs-text">
+            <ul class="cs-card-group">
+                <div tabindex="0">
+
+                    <li class="cs-item">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/check-circle.svg"
+                            alt="tick icon" width="48" height="48">
+                        <h3 class="cs-h3">Nationalwide Guarantee</h3>
+                        <p class="cs-item-text">
+                            Whether you’re at home, work or on holiday, your car is backed by our 12 month/20,000 km
+                            Parts and Labour Guarantee.
+                        </p>
+                </div>
+
+                </li>
+                <div tabindex="0">
+
+                    <li class="cs-item">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/speedometer.svg"
+                            alt="speedometer for repair service" width="48" height="48">
+                        <h3 class="cs-h3">Expert Electrician Services</h3>
+                        <p class="cs-item-text">
+                            We are one of Victoria’s largest auto electrician repairers with team of expert mechanicals
+                            for individual and business vehicles.
+                        </p>
+                    </li>
+                </div>
+                <div tabindex="0">
+
+                    <li class="cs-item">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Like.svg" alt="like icon"
+                            width="48" height="48">
+                        <h3 class="cs-h3">Highly Recommend</h3>
+                        <p class="cs-item-text">
+                            Our expert team can work on most manufactures and models of cars and can come onsite at your
+                            home or workplace.
+                        </p>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!--                  Services offered                   -->
+    <!-- ============================================ -->
+
+    <section id="services-1628">
+
+        <div class="cs-container">
+            <!-- <div class="cs-content"> -->
+            <!-- <div class="cs-flex"> -->
+            <!-- <span class="cs-topper">Our Services</span> -->
+            <h2 class="cs-title">Our Service</h2>
+            <!-- </div> -->
+            <!-- <p >
                 Aqestic recusandae laudantium optio amet a quisquam saepe aliquid, voluptate praesentium dicta fuga dolor error perspiciatis voluptatem eum cupiditate totam reiciendis quam minus inventore sint rem impedit esse quasi Tenetur sed reprehenderit earum a magni aliquid blanditiis dolores, veritatis soluta autem beatae officia expedita ipsum rerum doloribus sit provident delectus.
-            </p>
-        </div>                  
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <a href="" class="cs-link">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg" alt="room" width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">Process Safety & Risk Management</h3>
-                    <p class="cs-item-text">
-                        We provide some of the finest quality, most reliable, and cost effective services and solutions.
-                    </p>
-                    <span class="cs-fake-link">
-                        Get Started
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-            <li class="cs-item">
-                <a href="" class="cs-link">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg" alt="room" width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">Occupational Safety & Health</h3>
-                    <p class="cs-item-text">
-                        We provide some of the finest quality, most reliable, and cost effective services and solutions.
-                    </p>
-                    <span class="cs-fake-link">
-                        Get Started
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-            <li class="cs-item">
-                <a href="" class="cs-link">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg" alt="room" width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">Security Assessment and Planning</h3>
-                    <p class="cs-item-text">
-                        We provide some of the finest quality, most reliable, and cost effective services and solutions.
-                    </p>
-                    <span class="cs-fake-link">
-                        Get Started
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-            <li class="cs-item">
-                <a href="" class="cs-link">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg" alt="room" width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">Security Assessment and Planning</h3>
-                    <p class="cs-item-text">
-                        We provide some of the finest quality, most reliable, and cost effective services and solutions.
-                    </p>
-                    <span class="cs-fake-link">
-                        Get Started
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</section>
-   <!-- ============================================ -->
-<!--                   Contact                    -->
-<!-- ============================================ -->
+            </p> -->
+            <!-- </div>                   -->
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" src="./images/start-service.jpg"
+                                alt="start system service image">
 
-<section id="contact-1150">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Contact Us</span>
-            <h2 class="cs-title">We Love to Hear from Our Happy Customers</h2>
-        </div>
-        <div class="cs-contact-group">
-            <picture class="cs-picture">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/group.jpg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/group.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/group.jpg" alt="people" width="630" height="300">
-            </picture>
-            <p class="cs-contact-text">
-                There are many variations of passages of available but the majority have suffered alteration in some form, by injected randomized words even slightly believable.
-            </p>
-            <ul class="cs-ul">
-                <li class="cs-li">
-                    <picture class="cs-icon-wrapper">
-                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-phone.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
-                    </picture>
-                    <div class="cs-flex-group">
-                        <span class="cs-header">Phone</span>
-                        <a href="tel:888-4565-789
-                        " class="cs-link">+1 (888) 4565 789
-                        </a>
-                    </div>
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" src="./images/start-service.jpg"
+                                alt="start system service image">
+                            <img src="./images/start-service.jpg" alt="start system service image" width="413"
+                                height="420">
+                        </picture>
+                        <h3 class="cs-h3">Car Starting System</h3>
+                        <p class="cs-item-text">
+                            Auto Electrician expert for the car starting systems on your car, including starter motors,
+                            alternators, batteries, coils, sensors and consists of many other components.
+                        </p>
+                        <span class="cs-fake-link">
+                            Get Started
+                            <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+                                alt="right arrow icon" width="20" height="20" loading="lazy" decoding="async"
+                                aria-hidden="true">
+                        </span>
+                    </a>
                 </li>
-                <li class="cs-li">
-                    <picture class="cs-icon-wrapper">
-                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-pin.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
-                    </picture>
-                    <div class="cs-flex-group">
-                        <span class="cs-header">Address</span>
-                        <a href="" class="cs-link">2553 Woodbridge Lane, Boston Ware 120</a>
-                    </div>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" src="./images/accessory.jpg"
+                                alt="car accessories service">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" src="./images/accessory.jpg"
+                                alt="car accessories service">
+                            <img src="./images/accessory.jpg" alt="car accessories service" width="413" height="420">
+                        </picture>
+                        <h3 class="cs-h3">Car Electrical Accessories</h3>
+                        <p class="cs-item-text">
+                            Auto Electrician expert for electrical or electrical accessories on your car, including
+                            wiring, electric windows, gauges, fuses and consists of many other components. </p>
+                        <span class="cs-fake-link">
+                            Get Started
+                            <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+                                alt="right arrow icon" width="20" height="20" loading="lazy" decoding="async"
+                                aria-hidden="true">
+                        </span>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" src="./images/ENGINE COMPUTER SYSTEMS.jpg"
+                                alt="Engine computer systems image">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" src="./images/ENGINE COMPUTER SYSTEMS.jpg"
+                                alt="Engine computer systems image">
+
+                            <img src="./images/ENGINE COMPUTER SYSTEMS.jpg" alt="Engine computer systems image"
+                                width="413" height="420">
+                        </picture>
+                        <h3 class="cs-h3">Engine Computer System</h3>
+                        <p class="cs-item-text">
+                            Auto Electrician expert for engine management systems on your car, including computers,
+                            Electronic Fuel Injection (EFI), EMS and consists of many other components. </p>
+                        </p>
+                        <span class="cs-fake-link">
+                            Get Started
+                            <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+                                alt="right arrow icon" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                        </span>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" src="./images/car lighting.jpg"
+                                alt="Engine computer systems image">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" src="./images/car lighting.jpg"
+                                alt="Engine computer systems image">
+
+                            <img src="./images/car lighting.jpg" alt="Engine computer systems image" width="413"
+                                height="420">
+                        </picture>
+
+                        <h3 class="cs-h3">Car Lighting System</h3>
+                        <p class="cs-item-text">
+                            Auto Electrician for the car lighting systems on your car, including brake lights,
+                            headlights, warning lights and consists of many other components.
+                        </p>
+                        <span class="cs-fake-link">
+                            Get Started
+                            <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+                                alt="right arrow icon" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                        </span>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" src="./images/roadside ass.jpg"
+                                alt="Roadside Assistance image">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" src="./images/roadside ass1.jpg"
+                                alt="Roadside Assistance image">
+                            <img src="./images/roadside ass1.jpg" alt="Roadside Assistance image" width="413"
+                                height="420">
+                        </picture>
+                        <h3 class="cs-h3">Roadside Assistance</h3>
+                        <p class="cs-item-text">
+                            If you have an emergency auto electrical problem, Ace Auto Electrician are on the road seven
+                            days a week.
+                        </p>
+                        <span class="cs-fake-link">
+                            Get Started
+                            <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+                                alt="right arrow icon" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                        </span>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" src="./images/car repair.jpg"
+                                alt="Car Repair Service image">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" src="./images/car repair.jpg"
+                                alt="Car Repair Service image">
+                            <img src="./images/car repair.jpg" alt="Car Repair Service image" width="413" height="420">
+                        </picture>
+                        <h3 class="cs-h3">Repair Service</h3>
+                        <p class="cs-item-text">
+                            Auto Electrician expert to repair, service or replace the electrical problems on your car.
+                            We service and repair all makes and models and most importantly, on any day of the week.
+                        </p>
+                        <span class="cs-fake-link">
+                            Get Started
+                            <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg"
+                                alt="right arrow icon" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                        </span>
+                    </a>
                 </li>
             </ul>
         </div>
-        <!--Form-->
-        <form class="cs-form" id="cs-form-1150" name="Contact Form" method="post">
-            <label class="cs-label">
-                Name
-                <input class="cs-input" required type="text" id="name-1150" name="name" placeholder="Name">
-            </label>
-            <label class="cs-label cs-email">
-                Email
-                <input class="cs-input" required type="email" id="email-1150" name="email" placeholder="Email">
-            </label>
-            <label class="cs-label cs-phone">
-                Phone
-                <input class="cs-input" required type="number" id="phone-1150" name="phone" placeholder="Phone">
-            </label>
-            <label class="cs-label">
-                Message
-                <textarea class="cs-input cs-textarea" required name="Message" id="message-1150" placeholder="Write message..."></textarea>
-            </label>
-            <button class="cs-button-solid cs-submit" type="submit">Make an Appointment</button>
-        </form>
-        <!--Bounce Graphic-->
-        <img class="cs-graphic cs-graphic1" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/bounce.svg" alt="bounce" width="208" height="124">
-        <!--Coin Graphic-->
-        <img class="cs-graphic cs-graphic2" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/coin.svg" alt="bounce" width="205" height="161">
-    </div>
-</section>
-    
-<!-- ============================================ -->
-<!--                     FAQ                      -->
-<!-- ============================================ -->
+    </section>
+    <!-- ============================================ -->
+    <!--                   Contact                    -->
+    <!-- ============================================ -->
 
-<section id="faq-1193">
-    <div class="cs-container">
-        <div class="cs-image-group">
-            <picture class="cs-picture cs-picture1">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/body-shop.jpg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/body-shop.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/body-shop.jpg" alt="body shop" width="522" height="609" aria-hidden="true">
-            </picture>
-            <picture class="cs-picture cs-picture2">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic-cutout.png">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic-cutout.png">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic-cutout.png" alt="mechanic" width="263" height="650" aria-hidden="true">
-            </picture>
+    <section id="contact-1150">
+        <div class="cs-container">
+            <div class="cs-content">
+                <!-- <span class="cs-topper">Contact Us</span> -->
+                <h2 class="cs-title">Contact Us</h2>
+            </div>
+            <div class="cs-contact-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" src="./images/contact1.jpg" alt="Contact Us image">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" src="./images/contact1.jpg" alt="Contact Us image">
+                    <img loading="lazy" decoding="async" src="./images/contact1.jpg" alt="Contact Us image" width="630"
+                        height="300">
+                </picture>
+                <p class="cs-contact-text">
+                    You can contact us using our contact details, or send us message through the right form.
+                    Please expect up to within 1-3 business days for us to reach out to you. </p>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-phone.svg"
+                                alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">Phone</span>
+                            1800 223 288
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-pin.svg"
+                                alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">Address</span>
+                            2/8 Short St Dandenong VIC 3975
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-1150" name="Contact Form" method="post">
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name-1150" name="name" placeholder="Name">
+                </label>
+                <label class="cs-label cs-email">
+                    Email
+                    <input class="cs-input" required type="email" id="email-1150" name="email" placeholder="Email">
+                </label>
+                <label class="cs-label cs-phone">
+                    Phone
+                    <input class="cs-input" required type="number" id="phone-1150" name="phone" placeholder="Phone">
+                </label>
+                <label class="cs-label">
+                    Message
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1150"
+                        placeholder="Write message..."></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Submit</button>
+            </form>
+            <!--Bounce Graphic-->
+            <img class="cs-graphic cs-graphic1" loading="lazy" decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/bounce.svg" alt="bounce image" width="208"
+                height="124">
+            <!--Coin Graphic-->
+            <img class="cs-graphic cs-graphic2" loading="lazy" decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/coin.svg" alt="coin image" width="205"
+                height="161">
         </div>
-        <div class="cs-content">
-            <span class="cs-topper">Asked questions</span>
-            <h2 class="cs-title">Frequently Asked Questions</h2>
-            <ul class="cs-faq-group">
-                <!-- Active class added as default -->
-                <li class="cs-faq-item active">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            What are your prices for brake replacement?
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Some cleaning plans require a minimum commitment term. Cancelling your plan before the minimum term is complete will result in a $99 fee. If you want to learn more information about how to cancel, please inbox us.
-                    </p>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                     FAQ                      -->
+    <!-- ============================================ -->
+
+    <section id="faq-1193">
+        <div class="cs-head">
+            <h2 class="cs-title">FAQ - Frequently asked question</h2>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="cs-container">
+
+            <div class="cs-content">
+                <ul class="cs-faq-group">
+                    <!-- Active class added as default -->
+
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How To Choose An Auto Electrician?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            1. Check that your Auto Electrician is fully qualified
+                            <br>
+                            2. Make sure your Auto Electrician has the right experience
+                            <br>
+                            3. Make sure your Auto Electrician has the right equipment
+                            <br>
+                            4. Make sure your Auto Electrician’s work protects your vehicles warranty
+                            <br>
+
+                            5. Make sure your Auto Electrician’s work protects your vehicles warranty
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I become an Automotive Electricians? </span>
+                        </button>
+                        <p class="cs-item-p">
+                            To be qualified as an automotive electrician you must complete formal studies and obtain a
+                            certificate III in Automotive Electrical Technology or Automotive (Electrical), which in
+                            most cases would be obtained while undertaking an apprenticeship.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Is there any promotion for the services?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Ace Mobile knows that stretching your budget on a pension is hard. That’s why we offer
+                            pensioners the following special discount.
+
+                            10% discount on labour
+                            To qualify for the pensioner discount, simply tell our phone operator that you are a
+                            pensioner (or use the form below) and show us your pension card on the day of your service.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Can my car’s fuel economy be affected by a flat (discharged) battery?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Vehicle Electricians Answer: YES <br>
+
+                            When a car’s battery becomes flat, the car’s alternator will work to recharge the battery
+                            and during this process there will be added load on the engine. With added load on the
+                            engine there will be more fuel consumed.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <button id="backToTopBtn" title="Go to top">&#8593;</button>
+
+
+
+    <!--                   Footer                     -->
+    <!-- ============================================ -->
+
+    <footer id="cs-footer-308">
+        <div class="cs-container">
+            <!-- Logo Group -->
+            <div class="cs-logo-group">
+                <span class="cs-header">ACE Auto Electrician Melbourne</span>
+                <p class="cs-text">
+                    Ace Auto Electrician is a family business that has been servicing Melbourne and the surrounded areas
+                    with honesty and reliable service.
+                    <br>
+                    <br>
+                    Established in 1986 ACE Auto Electrician has grown into one of Victoria’s largest auto electrician
+                    repairers.
+            </div>
+            <!-- Links -->
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <span class="cs-header"> Links</span>
                 </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            What is your plan cancellation policy?
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
-                    </p>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Home</a>
                 </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            What are your prices for brake replacement?
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
-                    </p>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">About Us</a>
                 </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            What are your prices for brake replacement?
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
-                    </p>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Our Services</a>
                 </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            What are your prices for brake replacement?
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
-                    </p>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Bookings</a>
+                </li>
+
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Quotes</a>
+                </li>
+            </ul>
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <span class="cs-header">Information</span>
+                </li>
+
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Articles</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Guarantee</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Privacy Policy</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Supported Car Brands</a>
+                </li>
+                <!-- <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">About Us</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Privacy Policy</a>
+                </li> -->
+            </ul>
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <span class="cs-header">Hours</span>
+                </li>
+                <li class="cs-nav-li">
+                    <span class="footer-text">
+                        Mon-Fri <br> 7:30am - 5:30pm
+                    </span>
+                    <!-- <a class="cs-nav-link" href="">Mon-Fri   7:30am - 5:30pm</a> -->
+                </li>
+                <li class="cs-nav-li">
+                    <span class="footer-text">
+                        Saturday <br>8:00am - 3:00pm
+                    </span>
+                </li>
+                <li class="cs-nav-li">
+                    <span class="footer-text">
+                        Sunday<br>8:00am - 5:00pm
+                    </span>
+                </li>
+            </ul>
+
+            <!-- Contact Info -->
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <span class="cs-header">Contact</span>
+                </li>
+                <li class="cs-nav-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-stroke.svg" alt="phone"
+                        width="24" height="24">
+                    <span class="footer-text">
+                        1800 223 288</span>
+                </li>
+
+                <li class="cs-nav-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-stroke.svg" alt="pin" width="24"
+                        height="24">
+                    <span class="footer-text">
+                        2/8 Short St<br> Dandenong VIC 3975
+                    </span>
                 </li>
             </ul>
         </div>
-    </div>
-</section>
-                                
-     
-<!--                   Footer                     -->
-<!-- ============================================ -->
-
-<footer id="cs-footer-308">
-    <div class="cs-container">
-        <!-- Logo Group -->
-        <div class="cs-logo-group">
-            <a aria-label="go back to home" class="cs-logo" href="">
-                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Footer/stitch-law.svg" alt="logo" width="178" height="32">
-            </a>
-            <p class="cs-text">
-                Aenean tincidunt id mauris idology auctor. Donec at ligula lacus. Nulla dig nissimmi quis neque interdum. An Ohio man allegedly punched.
-            </p>
+        <div class="cs-bottom">
+            <span class="cs-copyright">CONTENT COPYRIGHT © 2024 ACE AUTO ELECTRICIAN</a></span>
         </div>
-        <!-- Links -->
-        <ul class="cs-nav">
-            <li class="cs-nav-li">
-                <span class="cs-header">Sitemap</span>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="">About</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="">Services</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="">Portfolio</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="">Contact</a>
-            </li>
-        </ul>
-        <ul class="cs-nav">
-            <li class="cs-nav-li">
-                <span class="cs-header">Categories</span>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="">Business Law</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="">Education Law</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="">Insurance Defense</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="">Family Law</a>
-            </li>
-        </ul>
-        <!-- Contact Info -->
-        <ul class="cs-nav">
-            <li class="cs-nav-li">
-                <span class="cs-header">Contact</span>
-            </li>
-            <li class="cs-nav-li">
-                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-stroke.svg" alt="phone" width="24" height="24">
-                <a class="cs-nav-link cs-phone" href="tel: 123-456-7890">(123) 456-7890</a>
-            </li>
-            <li class="cs-nav-li">
-                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/email-stroke.svg" alt="email" width="24" height="24">
-                <a class="cs-nav-link cs-email" href="mailto:info@codestitch.com">info@codestitch.com</a>
-            </li>
-            <li class="cs-nav-li">
-                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-stroke.svg" alt="pin" width="24" height="24">
-                <a class="cs-nav-link cs-address" href="" target="_blank" rel="noopener">
-                    123 Avenue Street<br> Oak Harbor, WA 98101
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="cs-bottom">
-        <span class="cs-copyright">© Copyright 2022 - <a class="cs-copyright-link" href="">Stitch Law Design</a></span>
-    </div>
-</footer>
-                                
+    </footer>
+
 
 
 </body>
+
 </html>
