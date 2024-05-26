@@ -1,3 +1,6 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+                         
 // add classes for mobile navigation toggling
 var CSbody = document.querySelector('body');
 const CSnavbarMenu = document.querySelector('#cs-navigation');
@@ -32,6 +35,8 @@ for (const item of dropDowns) {
 	item.addEventListener('click', onClick);
 }
                                 
+
+                                
 const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         for (const item of faqItems) {
             const onClick = () => {
@@ -39,4 +44,34 @@ const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         }
         item.addEventListener('click', onClick)
         }
-                                
+
+
+		// Get the button:
+let toTopBtn = document.getElementById("backToTopBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    toTopBtn.style.display = "block";
+  } else {
+    toTopBtn.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+const toTopFunc = ()=> {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+toTopBtn.addEventListener('click', toTopFunc);
+
+
+
+
+});
+
+
+
